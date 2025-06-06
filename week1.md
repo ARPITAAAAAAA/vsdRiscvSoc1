@@ -196,9 +196,3 @@ This project demonstrates:
 - Interrupts & atomic ops
 - Inline CSR access
 - Minimal embedded C development
-
----
-
-## 📞 Contact
-
-For support or contributions, raise an issue or pull request.
