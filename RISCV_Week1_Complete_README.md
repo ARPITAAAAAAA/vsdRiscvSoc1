@@ -100,40 +100,31 @@ Operands	Registers or immediates the instruction works with (e.g., sp, ra)
 
 ## 5. 📋 RV32 Register Table
 
-RV32I Register Table
-Number     Name     ABI Name                            Description / Role
-x0         zero     zero                                Constant 0 (hard-wired zero)
-x1         ra       Return Address                      Used to return from function calls
-x2         sp       Stack Pointer                       Points to top of stack
-x3         gp       Global Pointer                      Points to global data
-x4         tp       Thread Pointer                      Thread-local storage
-x5         t0       Temporary                           Caller-saved temporary
-x6         t1       Temporary                           Caller-saved temporary
-x7         t2       Temporary                           Caller-saved temporary
-x8         s0       Saved Register / Frame Pointer      Callee-saved, often frame pointer
-x9         s1       Saved Register                      Callee-saved
-x10        a0       Argument / Return Value             First argument, or return value
-x11        a1       Argument / Return Value             Second argument, or return value
-x12        a2       Argument                            3rd argument
-x13        a3       Argument                            4th argument
-x14        a4       Argument                            5th argument
-x15        a5       Argument                            6th argument
-x16        a6       Argument                            7th argument
-x17        a7       Argument                            8th argument
-x18        s2       Saved Register                      Callee-saved
-x19        s3       Saved Register                      Callee-saved
-x20        s4       Saved Register                      Callee-saved
-x21        s5       Saved Register                      Callee-saved
-x22        s6       Saved Register                      Callee-saved
-x23        s7       Saved Register                      Callee-saved
-x24        s8       Saved Register                      Callee-saved
-x25        s9       Saved Register                      Callee-saved
-x26        s10      Saved Register                      Callee-saved
-x27        s11      Saved Register                      Callee-saved
-x28        t3       Temporary                           Caller-saved temporary
-x29        t4       Temporary                           Caller-saved temporary
-x30        t5       Temporary                           Caller-saved temporary
-x31        t6       Temporary                           Caller-saved temporary
+RV32I Register Descriptions (with ABI Names and Roles):
+
+x0, known as zero, is a constant hard-wired to 0. It always returns 0 when read.
+
+x1, called ra (Return Address), is used to store the return address during function calls.
+
+x2, named sp (Stack Pointer), points to the top of the current stack.
+
+x3, or gp (Global Pointer), points to global data in memory.
+
+x4, called tp (Thread Pointer), is used for accessing thread-local storage.
+
+x5 through x7, named t0, t1, and t2, are temporary registers and are caller-saved.
+
+x8, called s0, is a callee-saved register and often doubles as the frame pointer.
+
+x9, or s1, is another callee-saved register.
+
+x10 and x11, named a0 and a1, serve as argument registers and also hold return values.
+
+x12 to x17, named a2 to a7, are used to pass the remaining arguments in a function call.
+
+x18 to x27, named s2 to s11, are saved (callee-saved) registers, which a called function must preserve.
+
+x28 to x31, named t3 to t6, are additional temporary registers and are caller-saved.
 
 
 RISC-V Calling Convention Summary
